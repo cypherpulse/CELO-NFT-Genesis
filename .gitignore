@@ -32,3 +32,5 @@ Thumbs.db
 # Script files
 *.ps1
 *.sh
+# Solidity coverage
+coverage/
