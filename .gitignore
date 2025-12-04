@@ -29,5 +29,6 @@ Thumbs.db
 *.tmp
 *.swp
 
-.ps1
-.sh
+# Script files
+*.ps1
+*.sh
