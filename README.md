@@ -110,7 +110,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## 🌟 Acknowledgments
 
-Built with inspiration from open-source blockchain communities. Special thanks to the Celo ecosystem for enabling accessible DeFi and NFTs.
+Built with inspiration from open source blockchain communities. Special thanks to the Celo ecosystem for enabling accessible DeFi and NFTs.
 
 ---
 
