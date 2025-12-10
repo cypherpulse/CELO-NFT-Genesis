@@ -65,16 +65,25 @@ Expected output: All tests pass, confirming minting, ownership, and URI function
 
 ## 🚀 Deployment
 
+### Celo Sepolia Testnet
 Deploy to Celo Sepolia:
 ```bash
-forge script script/CeloLearningNFT.s.sol --rpc-url $CELO_SEPOLIA_RPC_URL --broadcast --chain celo-sepolia --keystore ~/.foundry/keystores/your_keystore --sender $ADDRESS
+./deploy_and_verify.sh
 ```
 
 - Note the contract address from the output.
-- Verify on Celo Sepolia Blockscout:
-  ```bash
-  forge verify-contract --chain celo-sepolia --etherscan-api-key $CELOSCAN_API_KEY <contract_address> src/CeloLearningNFT.sol:CeloLearningNFT
-  ```
+- Automatically verifies on Celo Sepolia Blockscout.
+
+### Celo Mainnet
+**⚠️ WARNING: Mainnet deployments use real CELO. Ensure you have funds and test on testnet first.**
+
+Deploy to Celo Mainnet:
+```bash
+./deploy_and_verify_mainnet.sh
+```
+
+- Requires `CELO_MAINNET_ADDRESS` and `celoKey` keystore in `.env`.
+- Automatically verifies on Celoscan.
 
 ## 📖 Usage
 
@@ -89,7 +98,7 @@ nft.mintNft(recipientAddress, "ipfs://your-metadata-uri");
 - Get metadata: `tokenURI(tokenId)`
 - Total supply: `totalSupply()`
 
-Interact via [Celo Sepolia Blockscout](https://sepolia.celoscan.io/) or tools like Remix.
+Interact via [Celo Sepolia Blockscout](https://sepolia.celoscan.io/) or [Celo Mainnet Celoscan](https://celoscan.io/).
 
 ## 🤝 Contributing
 
@@ -114,4 +123,6 @@ Built with inspiration from open source blockchain communities. Special thanks t
 
 ---
 
-**Live Contract**: [0xdfd6a971D1e6Ff57e8cB6A585b3f59A18221F10D](https://celo-sepolia.blockscout.com/address/0xdfd6a971D1e6Ff57e8cB6A585b3f59A18221F10D) on Celo Sepolia.
+**Live Contracts**:
+- **Celo Sepolia Testnet**: [0x12e19c8dd2BaE5E95e503849103B16027e580DFf](https://celo-sepolia.blockscout.com/address/0x12e19c8dd2BaE5E95e503849103B16027e580DFf)
+- **Celo Mainnet**: [0x25b1ce45241cb250ba8b6F2202395Fd8dAfB01b1](https://celoscan.io/address/0x25b1ce45241cb250ba8b6F2202395Fd8dAfB01b1)
